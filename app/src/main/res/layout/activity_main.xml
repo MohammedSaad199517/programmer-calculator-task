@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    tools:context=".MainActivity">
+
+   <ImageView
+       android:id="@+id/image"
+       android:layout_width="240dp"
+       android:layout_height="240dp"
+       android:layout_marginTop="48dp"
+       android:src="@drawable/calculator"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <EditText
+       android:id="@+id/decimal"
+       style="@style/editTextStyle"
+       android:hint="decimal"
+       android:inputType="number"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/image"
+       />
+
+   <EditText
+       android:id="@+id/binary"
+       style="@style/editTextStyle"
+       android:digits="01"
+       android:hint="binary"
+       android:inputType="number"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/decimal" />
+   <EditText
+       android:id="@+id/octa"
+       style="@style/editTextStyle"
+       android:digits="01234567"
+       android:hint="octa"
+       android:inputType="number"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/binary" />
+
+   <EditText
+       android:id="@+id/hexa"
+       style="@style/editTextStyle"
+       android:digits="0123456789abcdefABCDEF"
+       android:hint="hexa"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/octa" />
+
+   <com.google.android.material.button.MaterialButton
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/hexa"
+       android:id="@+id/clearButton"
+       android:layout_width="match_parent"
+       android:layout_height="48dp"
+       android:layout_margin="16dp"
+       android:backgroundTint="@color/clearButton"
+       android:text="clear"
+       android:textSize="16sp"
+       app:cornerRadius="8dp"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
